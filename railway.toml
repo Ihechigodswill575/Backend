@@ -1,0 +1,11 @@
+[build]
+  builder = "NIXPACKS"
+  buildCommand = "npm install"
+
+[deploy]
+  startCommand = "node src/app.js"
+  restartPolicyType = "ON_FAILURE"
+  restartPolicyMaxRetries = 3
+
+[[services]]
+  name = "tavikmart-api"
